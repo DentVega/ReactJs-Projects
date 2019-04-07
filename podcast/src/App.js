@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import './App.css';
-import AppBarLogin from "./components/AppBarLogin/AppBarLogin";
+import Home from "./pages/home/Home";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <AppBarLogin>
+        <Home>
 
-        </AppBarLogin>
+        </Home>
       </div>
     );
   }
