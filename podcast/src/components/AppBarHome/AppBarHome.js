@@ -6,6 +6,7 @@ import Typography from "@material-ui/core/es/Typography/Typography";
 import IconButton from "@material-ui/core/es/IconButton/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import Button from "@material-ui/core/es/Button/Button";
+import {Link} from "react-router-dom";
 
 const styles = {
     root: {
@@ -50,11 +51,15 @@ class AppBarHome extends Component {
                         <Typography variant={"h5"} color={"inherit"} className={classes.grow}>
                             PodCast
                         </Typography>
-                        <Button className={classes.button} color="inherit" onClick={this.loadLogin}>Sign In</Button>
-                        <Button className={classes.button} color="inherit" onClick={this.loadRegistration}>Sign
-                            Up</Button>
-                        <Button className={classes.button} color="inherit" onClick={this.loadTestPage}>Test
-                            Page</Button>
+                        <Link to={"/login"}>
+                            <Button className={classes.button} color="inherit">Sign In</Button>
+                        </Link>
+                        <Link to={"/registration"}>
+                            <Button className={classes.button} color="inherit">Sign Up</Button>
+                        </Link>
+                        <Link to={"/test"}>
+                            <Button className={classes.button} color="inherit">Test Page</Button>
+                        </Link>
                     </Toolbar>
                 </AppBar>
             </div>

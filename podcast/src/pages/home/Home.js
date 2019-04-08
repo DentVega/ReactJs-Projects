@@ -3,6 +3,9 @@ import AppBarHome from "../../components/AppBarHome/AppBarHome";
 import Login from "../login/Login";
 import Registration from "../registration/Registration";
 import TestPage from "../testPage/TestPage";
+import { BrowserRouter, Route, Switch} from "react-router-dom";
+import NotFound from "../../components/notFound/NotFound";
+import CicleLifeComponent from "../../components/cicleLifeComponent/CicleLifeComponent";
 
 class Home extends Component {
 
@@ -47,19 +50,27 @@ class Home extends Component {
         });
     };
 
+    loadRegistration= () => {
+       return <Registration onChange={this.handleChange}
+                      formValues={this.state.form}>
+
+        </Registration>
+    };
+
     render() {
         return (
             <div>
-                <AppBarHome changePage={this.changePage}/>
-                {
-                    this.state.homeState.page === "login" ?
-                        <Login/> :
-                        this.state.homeState.page === "registration" ?
-                            <Registration
-                                onChange={this.handleChange}
-                                formValues={this.state.form}/> :
-                            <TestPage/>
-                }
+                <BrowserRouter>
+                    <div>
+                        <AppBarHome changePage={this.changePage}/>
+                        <Switch>
+                            <Route exact path="/login" component={Login}/>
+                            <Route exact path="/test" component={CicleLifeComponent}/>
+                            <Route exact path="/registration" component={this.loadRegistration}/>
+                            <Route component={NotFound}/>
+                        </Switch>
+                    </div>
+                </BrowserRouter>
             </div>
         );
     }
