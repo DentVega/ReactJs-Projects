@@ -8,8 +8,8 @@ class CicleLifeComponent extends Component {
         console.log('1. constructor()');
         this.state = {
             data: [],
-            loquesea: false,
-            tua: 0
+            flag: false,
+            flagRender: 0
         }
     }
 
@@ -57,7 +57,7 @@ class CicleLifeComponent extends Component {
 
 
     shouldComponentUpdate(nextProps, nextState, nextContext) {
-        if (this.state.tua === 2)
+        if (this.state.flagRender === 2)
             return false
     }
 
@@ -95,8 +95,8 @@ class CicleLifeComponent extends Component {
         return (
             <div>
                 hOLA QUE HACE
-                {this.state.loquesea == true ? <h1>true</h1> : <h1>false</h1>}
-                <Button onClick={this.setStateLoqueSea()}/>
+                {this.state.flag === true ? this.renderTrue() : this.renderFalse()}
+                <Button variant="contained" onClick={this.setStateLoqueSea()} color={"primary"}>Update</Button>
             </div>
         );
     }
