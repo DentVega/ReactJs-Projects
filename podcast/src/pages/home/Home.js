@@ -27,7 +27,18 @@ class Home extends Component {
         })
     };
 
+    handleChange2 = e => {
+        const nextForm = this.state.form;
+        nextForm[e.target.name] = e.target.value;
+        this.setState({
+            form: {
+                form: nextForm,
+            },
+        });
+    };
+
     handleChange = e => {
+        //this.setState({firstName: e.target.value,});
         this.setState({
             form: {
                 ...this.state.form,
