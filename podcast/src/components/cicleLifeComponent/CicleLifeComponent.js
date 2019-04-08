@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Button from "@material-ui/core/es/Button/Button";
 
 class CicleLifeComponent extends Component {
 
@@ -6,7 +7,9 @@ class CicleLifeComponent extends Component {
         super(props);
         console.log('1. constructor()');
         this.state = {
-            data: []
+            data: [],
+            loquesea: false,
+            tua: 0
         }
     }
 
@@ -52,6 +55,12 @@ class CicleLifeComponent extends Component {
         }, 3000)
     }
 
+
+    shouldComponentUpdate(nextProps, nextState, nextContext) {
+        if (this.state.tua === 2)
+            return false
+    }
+
     componentDidUpdate(prevProps, prevState, snapshot) {
         console.log('5, componenteDidUpdate');
         console.log({
@@ -66,14 +75,28 @@ class CicleLifeComponent extends Component {
 
     componentWillUnmount() {
         console.log('6, componentWillUnmount');
-        //clearTimeout(timeour)
     }
+
+    renderTrue = () => {
+      return <h1> True</h1>
+    };
+
+    renderFalse = () => {
+        return <h1> False</h1>
+    };
+
+    setStateLoqueSea = () => {
+        this.setState({ loquesea: true,
+        tua: 2})
+    };
 
     render() {
         console.log('2. render()');
         return (
             <div>
-
+                hOLA QUE HACE
+                {this.state.loquesea == true ? <h1>true</h1> : <h1>false</h1>}
+                <Button onClick={this.setStateLoqueSea()}/>
             </div>
         );
     }
