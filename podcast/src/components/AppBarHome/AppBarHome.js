@@ -25,11 +25,24 @@ const styles = {
 };
 
 class AppBarHome extends Component {
+
+    loadLogin = () => {
+        this.props.changePage("login")
+    };
+
+    loadRegistration = () => {
+        this.props.changePage("registration")
+    };
+
+    loadTestPage = () => {
+        this.props.changePage("testPage")
+    };
+
     render() {
-        const { classes } = this.props;
+        const {classes} = this.props;
         return (
             <div className={classes.root}>
-                <AppBar >
+                <AppBar position={"static"}>
                     <Toolbar>
                         <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
                             <MenuIcon/>
@@ -37,8 +50,11 @@ class AppBarHome extends Component {
                         <Typography variant={"h5"} color={"inherit"} className={classes.grow}>
                             PodCast
                         </Typography>
-                        <Button className={classes.button} color="inherit">Sign In</Button>
-                        <Button className={classes.button} color="inherit">Sign Up</Button>
+                        <Button className={classes.button} color="inherit" onClick={this.loadLogin}>Sign In</Button>
+                        <Button className={classes.button} color="inherit" onClick={this.loadRegistration}>Sign
+                            Up</Button>
+                        <Button className={classes.button} color="inherit" onClick={this.loadTestPage}>Test
+                            Page</Button>
                     </Toolbar>
                 </AppBar>
             </div>
