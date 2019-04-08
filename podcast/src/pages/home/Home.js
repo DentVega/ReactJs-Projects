@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import AppBarHome from "../../components/AppBarHome/AppBarHome";
 import Login from "../login/Login";
-import RegistrationForm from "../registrationForm/RegistrationForm";
+import Registration from "../registration/Registration";
 import TestPage from "../testPage/TestPage";
 
 class Home extends Component {
@@ -9,6 +9,13 @@ class Home extends Component {
     state = {
         homeState: {
             page: "registration",
+        },
+        form: {
+            firstName: '',
+            lastName: '',
+            email: '',
+            jobTitle: '',
+            twitter: '',
         },
     };
 
@@ -20,6 +27,15 @@ class Home extends Component {
         })
     };
 
+    handleChange = e => {
+        this.setState({
+            form: {
+                ...this.state.form,
+                [e.target.name]: e.target.value,
+            },
+        });
+    };
+
     render() {
         return (
             <div>
@@ -28,7 +44,9 @@ class Home extends Component {
                     this.state.homeState.page === "login" ?
                         <Login/> :
                         this.state.homeState.page === "registration" ?
-                            <RegistrationForm/> :
+                            <Registration
+                                onChange={this.handleChange}
+                                formValues={this.state.form}/> :
                             <TestPage/>
                 }
             </div>

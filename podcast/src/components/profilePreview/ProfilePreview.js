@@ -4,7 +4,7 @@ class ProfilePreview extends Component {
     render() {
         return (
             <div>
-
+                {this.props.firstName}
             </div>
         );
     }
