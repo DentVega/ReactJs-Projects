@@ -66,7 +66,7 @@ class Home extends Component {
                         <AppBarHome changePage={this.changePage}/>
                         <Switch>
                             <Route exact path="/login" component={Login}/>
-                            <Route exact path="/test" component={ExampleApiRequest}/>
+                            <Route exact path="/test" component={TestPage}/>
                             <Route exact path="/registration" component={this.loadRegistration}/>
                             <Route component={NotFound}/>
                         </Switch>
