@@ -7,6 +7,7 @@ import { BrowserRouter, Route, Switch} from "react-router-dom";
 import NotFound from "../../components/notFound/NotFound";
 import CicleLifeComponent from "../../components/cicleLifeComponent/CicleLifeComponent";
 import ExampleApiRequest from "../../components/exampleApiRequest/ExampleApiRequest";
+//https://medium.com/@jmz12/entendiendo-los-ciclos-de-vida-8a70abb3b51a
 
 class Home extends Component {
 
@@ -66,7 +67,7 @@ class Home extends Component {
                         <AppBarHome changePage={this.changePage}/>
                         <Switch>
                             <Route exact path="/login" component={Login}/>
-                            <Route exact path="/test" component={TestPage}/>
+                            <Route exact path="/test" component={CicleLifeComponent}/>
                             <Route exact path="/registration" component={this.loadRegistration}/>
                             <Route component={NotFound}/>
                         </Switch>
