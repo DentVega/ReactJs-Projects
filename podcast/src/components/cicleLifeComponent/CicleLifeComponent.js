@@ -17,7 +17,7 @@ class CicleLifeComponent extends Component {
         console.log('3. componenteDidMount()');
         //const timeOutId =
 
-        setTimeout(() => {
+        this.timeoutId = setTimeout(() => {
             this.setState({
                 data: [
                     {
@@ -75,6 +75,7 @@ class CicleLifeComponent extends Component {
 
     componentWillUnmount() {
         console.log('6, componentWillUnmount');
+        clearTimeout(this.timeoutId)
     }
 
     renderTrue = () => {

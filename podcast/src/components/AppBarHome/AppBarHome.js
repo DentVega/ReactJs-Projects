@@ -22,6 +22,7 @@ const styles = {
     button: {
         border: "1px solid white",
         margin: 4,
+        textColor: "white",
     }
 };
 
