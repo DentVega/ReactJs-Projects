@@ -20,7 +20,7 @@ const styles = theme => ({
 
 class RegistrationForm extends Component {
 
-    handleClick = e => {
+    handleClick = () => {
         console.log('Button was clicked');
     };
 
@@ -31,7 +31,6 @@ class RegistrationForm extends Component {
     };
 
     render() {
-        const {classes} = this.props;
         return (
             <div>
                 <h1> Formulario de Registro </h1>

@@ -24,7 +24,6 @@ const styles = theme => ({
 class Registration extends Component {
 
     render() {
-        const {classes} = this.props;
         return (
             <div>
                 <Grid container spacing={24}>
