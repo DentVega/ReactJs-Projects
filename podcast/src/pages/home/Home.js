@@ -5,7 +5,6 @@ import Registration from "../registration/Registration";
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 import NotFound from "../../components/notFound/NotFound";
 import RequestRickAndMorty from "../../components/exampleApiRequest/RequestRickAndMorty";
-//https://medium.com/@jmz12/entendiendo-los-ciclos-de-vida-8a70abb3b51a
 
 class Home extends Component {
 
@@ -20,6 +19,7 @@ class Home extends Component {
             jobTitle: '',
             twitter: '',
         },
+        open: false,
     };
 
     changePage = (string) => {
@@ -41,9 +41,13 @@ class Home extends Component {
 
     loadRegistration= () => {
        return <Registration onChange={this.handleChange}
-                      formValues={this.state.form}>
+                            form={this.state.form}>
 
         </Registration>
+    };
+
+    handleDrawerOpen = () => {
+        this.setState({ open: true });
     };
 
     render() {
@@ -51,7 +55,8 @@ class Home extends Component {
             <div>
                 <BrowserRouter>
                     <div>
-                        <AppBarHome changePage={this.changePage}/>
+                        <AppBarHome changePage={this.changePage} handleDrawerOpen={this.handleDrawerOpen}/>
+
                         <Switch>
                             <Route exact path="/login" component={Login}/>
                             <Route exact path="/test" component={RequestRickAndMorty}/>

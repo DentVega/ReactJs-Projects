@@ -77,7 +77,9 @@ class Login extends Component {
                             <Button variant="contained" color="primary" className={classes.button}>
                                 Iniciar sesion
                             </Button>
+
                         </form>
+                        <h6>Olvidades tu contraseña</h6>
                     </Grid>
                 </Grid>
 

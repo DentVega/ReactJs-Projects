@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Button from "@material-ui/core/es/Button/Button";
+//https://medium.com/@jmz12/entendiendo-los-ciclos-de-vida-8a70abb3b51a
 
 class CicleLifeComponent extends Component {
 
@@ -23,12 +24,12 @@ class CicleLifeComponent extends Component {
     componentDidUpdate(prevProps, prevState, snapshot) {
         console.log('5, componenteDidUpdate');
         console.log({
-            prevProps: prevProps,
-            prevState: prevState
+            "prevProps": prevProps,
+            "prevState": prevState
         });
         console.log({
-            props: this.props,
-            state: this.state,
+            "props": this.props,
+            "state": this.state,
         })
     }
 
@@ -58,10 +59,7 @@ class CicleLifeComponent extends Component {
     }
 
     componentDidMount() {
-        //Si se puede realizar llamadas a Apis, suscripciones, cambios de estado
         console.log('3. componenteDidMount()');
-        //const timeOutId =
-
         this.timeoutId = setTimeout(() => {
             this.setState({
                 data: [
@@ -118,8 +116,6 @@ class CicleLifeComponent extends Component {
     componentWillUpdate(nextProps, nextState, nextContext) {
         //Cambios de estado
     }
-
-
 
     //Render
 

@@ -29,16 +29,16 @@ class Registration extends Component {
                 <Grid container spacing={24}>
                     <Grid item xs={6}>
                         <ProfilePreview
-                            firstName={this.props.formValues.firstName}
-                            lastName={this.props.formValues.lastName}
-                            twitter={this.props.formValues.twitter}
-                            jobTitle={this.props.formValues.jobTitle}
-                            email={this.props.formValues.email}/>
+                            firstName={this.props.form.firstName}
+                            lastName={this.props.form.lastName}
+                            twitter={this.props.form.twitter}
+                            jobTitle={this.props.form.jobTitle}
+                            email={this.props.form.email}/>
                     </Grid>
                     <Grid item xs={6}>
                         <RegistrationForm
                             onChange={this.props.onChange}
-                            formValues={this.props.formValues}/>
+                            formValues={this.props.form}/>
                     </Grid>
                 </Grid>
             </div>
