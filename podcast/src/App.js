@@ -84,6 +84,8 @@ class App extends Component {
                     <ListDrawerIcons menu={'Home'}/>
                     <Divider/>
                     <ListDrawerIcons menu={'Secondary'}/>
+                    <Divider/>
+                    <ListDrawerIcons menu={'Development'}/>
                 </Drawer>
                 <main className={classes.content}>
                     <Fragment className={classes.toolbar}>
