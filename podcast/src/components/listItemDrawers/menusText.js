@@ -1,0 +1,17 @@
+import {HOME_ROUTE, CHAT_ROUTE, POST_ROUTE, INFORMATION_ROUTE, FAVORITES_ROUTE, ADVERTISEMENTS_ROUTE} from "../../routes/Routes";
+
+export const HOME_MENU = ['Home_MENU', 'Inicio', HOME_ROUTE];
+
+export const CHAT_MENU = ['Chat_MENU', 'Chat', CHAT_ROUTE];
+
+export const INFORMATION_MENU = ['Information_MENU', 'Informacion', INFORMATION_ROUTE];
+
+export const POST_MENU = ['POST_MENU', 'Posts', POST_ROUTE];
+
+export const FAVORITES_MENU = ['FAVORITES_MENU', 'Favoritos', FAVORITES_ROUTE];
+
+export const ADVERTISEMENTS_MENU = ['ADVERTISEMENTS_MENU', 'Anuncios', ADVERTISEMENTS_ROUTE];
+
+export const MENU_HOME = [HOME_MENU, CHAT_MENU, POST_MENU];
+
+export const SECONDARY_MENU = [FAVORITES_MENU, ADVERTISEMENTS_MENU, INFORMATION_MENU];

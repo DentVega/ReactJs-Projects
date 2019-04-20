@@ -81,9 +81,9 @@ class App extends Component {
                         </IconButton>
                     </div>
                     <Divider/>
-                    <ListDrawerIcons icons={['Home', 'Chat', 'Informacion']}/>
+                    <ListDrawerIcons menu={'Home'}/>
                     <Divider/>
-                    <ListDrawerIcons icons={['Correos', 'Favoritos', 'Anuncios']}/>
+                    <ListDrawerIcons menu={'Secondary'}/>
                 </Drawer>
                 <main className={classes.content}>
                     <Fragment className={classes.toolbar}>
