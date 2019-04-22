@@ -23,22 +23,36 @@ const styles = theme => ({
 
 class Registration extends Component {
 
+    constructor(props) {
+        super(props);
+        this.state = {
+            form: {
+                firstName: null,
+                lastName: null,
+                twitter: null,
+                jobTitle: null,
+                email: null,
+            },
+        }
+    }
+
+
     render() {
         return (
             <div>
                 <Grid container spacing={24}>
                     <Grid item xs={6}>
                         <ProfilePreview
-                            firstName={this.props.form.firstName}
-                            lastName={this.props.form.lastName}
-                            twitter={this.props.form.twitter}
-                            jobTitle={this.props.form.jobTitle}
-                            email={this.props.form.email}/>
+                            firstName={this.state.form.firstName}
+                            lastName={this.state.form.lastName}
+                            twitter={this.state.form.twitter}
+                            jobTitle={this.state.form.jobTitle}
+                            email={this.state.form.email}/>
                     </Grid>
                     <Grid item xs={6}>
                         <RegistrationForm
-                            onChange={this.props.onChange}
-                            formValues={this.props.form}/>
+                            onChange={this.state.onChange}
+                            formValues={this.state.form}/>
                     </Grid>
                 </Grid>
             </div>

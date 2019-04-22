@@ -4,7 +4,7 @@ import App from "../../App";
 
 class Init extends Component {
     render() {
-        const authentication = true;
+        const authentication = false;
         return (
             <div>
                 {
