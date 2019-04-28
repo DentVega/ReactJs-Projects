@@ -36,6 +36,24 @@ class Registration extends Component {
         }
     }
 
+    // noinspection JSUnusedGlobalSymbols
+    handleChange2 = e => {
+        const nextForm = this.state.form;
+        nextForm[e.target.name] = e.target.value;
+        this.setState({
+            form: nextForm,
+        })
+    };
+
+    handleChange = e => {
+        console.log('handleChange');
+        console.log(e.target);
+        this.setState({
+            ...this.state.form,
+            [e.target.name]: e.target.value,
+        })
+    };
+
 
     render() {
         return (
@@ -51,8 +69,8 @@ class Registration extends Component {
                     </Grid>
                     <Grid item xs={6}>
                         <RegistrationForm
-                            onChange={this.state.onChange}
-                            formValues={this.state.form}/>
+                            onChange={this.handleChange}
+                            form={this.state.form}/>
                     </Grid>
                 </Grid>
             </div>

@@ -42,7 +42,7 @@ class RegistrationForm extends Component {
                             className="form-control"
                             type="text"
                             name="firstName"
-                            value={this.props.formValues.firstName}
+                            value={this.props.form.firstName}
                         />
                     </div>
 
@@ -53,7 +53,7 @@ class RegistrationForm extends Component {
                             className="form-control"
                             type="text"
                             name="lastName"
-                            value={this.props.formValues.lastName}
+                            value={this.props.form.lastName}
                         />
                     </div>
 
@@ -64,7 +64,7 @@ class RegistrationForm extends Component {
                             className="form-control"
                             type="email"
                             name="email"
-                            value={this.props.formValues.email}
+                            value={this.props.form.email}
                         />
                     </div>
 
@@ -75,7 +75,7 @@ class RegistrationForm extends Component {
                             className="form-control"
                             type="text"
                             name="jobTitle"
-                            value={this.props.formValues.jobTitle}
+                            value={this.props.form.jobTitle}
                         />
                     </div>
 
@@ -86,7 +86,7 @@ class RegistrationForm extends Component {
                             className="form-control"
                             type="text"
                             name="twitter"
-                            value={this.props.formValues.twitter}
+                            value={this.props.form.twitter}
                         />
                     </div>
 

@@ -4,6 +4,8 @@ export const CHAT_ROUTE = '/chat';
 
 export const POST_ROUTE = '/posts';
 
+export const CHANNELS_ROUTE = '/channels';
+
 export const INFORMATION_ROUTE = '/Information';
 
 export const FAVORITES_ROUTE = '/favorites';

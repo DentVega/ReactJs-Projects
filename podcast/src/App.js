@@ -19,9 +19,10 @@ import {BrowserRouter, Route, Switch} from "react-router-dom";
 import Login from "./pages/login/Login";
 import NotFound from "./components/notFound/NotFound";
 import Registration from "./pages/registration/Registration";
-import ListPodcast from "./components/listPodcast/ListPodcast";
 import ExampleApiRequest from "./components/exampleApiRequest/ExampleApiRequest";
 import ListDrawerIcons from "./components/listItemDrawers/ListDrawerIcons";
+import Channels from "./components/listPodcast/Channels";
+
 
 class App extends Component {
     state = {
@@ -92,8 +93,8 @@ class App extends Component {
                         <Switch>
                             <Route exact path="/login" component={Login}/>
                             <Route exact path="/registration" component={this.loadRegistration}/>
-                            <Route exact path="/podcast" component={ListPodcast}/>
                             <Route exact path="/test" component={ExampleApiRequest}/>
+                            <Route exact path="/channels" component={Channels}/>
                             <Route component={NotFound}/>
                         </Switch>
                     </Fragment>
